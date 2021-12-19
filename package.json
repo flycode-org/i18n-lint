@@ -18,7 +18,8 @@
   "main": "lib/i18n-lint.js",
   "types": "lib/i18n-lint.d.ts",
   "scripts": {
-    "test": "./node_modules/.bin/jshint bin/ lib/ test/ && ./node_modules/.bin/mocha --recursive",
+    "lint": "./node_modules/.bin/jshint bin/ lib/ test/",
+    "test": "./node_modules/.bin/mocha --recursive",
     "coverage": "./node_modules/.bin/nyc _mocha -- -R spec --recursive"
   },
   "author": {
