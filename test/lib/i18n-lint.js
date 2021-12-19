@@ -33,9 +33,11 @@ describe('I18nLint lib', function() {
         code: 'string',
         reason: 'string',
         evidence: 'regexp',
+        text: 'string',
         line: 'number',
         character: 'number',
-        scope: 'string'
+        scope: 'string',
+        continued: 'boolean'
       };
 
     Object.keys(expectedDetails).forEach(function(property) {
