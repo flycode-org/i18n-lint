@@ -12,5 +12,5 @@ module.exports = {
     ' btn-lg btn-success"><i class="fa fa-code-fork"></i> Fork me on '+
     'GitHub!</a>',
   character: 185,
-  continued: true
+  continued: false
 };
