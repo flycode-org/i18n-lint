@@ -1,11 +1,11 @@
 declare module 'i18n-lint' {
-  export type Options = {
-    /** List of which HTML attributes should be checked */
+  export type Options = Partial<{
+    /** Array of HTML attributes that should be checked */
     attributes: string[];
-    /** list of HTML tags to ignore when searching for hardcoded strings */
+    /** Array of HTML tags to ignore when searching for hardcoded strings */
     ignoreTags: string[];
     templateDelimiters: Array<[string, string]>;
-  };
+  }>;
   export type ErrorCode = 'W001' | 'W002';
   export type Error = {
     /** usually '(error)' */
