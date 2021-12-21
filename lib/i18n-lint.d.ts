@@ -1,10 +1,18 @@
 declare module 'i18n-lint' {
   export type Options = Partial<{
-    /** Array of HTML attributes that should be checked */
-    attributes: string[];
-    /** Array of HTML tags to ignore when searching for hardcoded strings */
-    ignoreTags: string[];
+    /**
+     * Specify the start and end template delimiters which the source files use.
+     * We can specify multiple delimiters if needed. For example, when linting EJS files:
+     * @example
+     *  I18nLint('file.ejs', {
+     *    templateDelimiters: [['<%', '%>']]
+     *  });
+     */
     templateDelimiters: Array<[string, string]>;
+    /** Specify which HTML attributes to check when searching for hardcoded strings. */
+    attributes: string[];
+    /** An array of tags which should be ignored when searching for hardcoded strings. */
+    ignoreTags: string[];
   }>;
   export type ErrorCode = 'W001' | 'W002';
   export type Error = {
